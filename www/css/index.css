@@ -1,0 +1,59 @@
+* { font-family: 'Tw Cen MT Condensed', sans-serif; font-style: normal; font-size: 20px; }
+body { 
+    margin: 0px;
+    padding: 0px; 
+    padding-bottom:50px; 
+    background-color: #AECFE8;
+}
+
+/* Tags  */
+th, tr, td { border: 1px solid white; height: 30px; }
+
+/* Classes genéricas */
+.fl { float: left; }
+.fr { float: right; }
+.cls { clear: both; }
+
+/* CaixaDados */
+.abraca {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.caixaDados {
+    display: inline-grid;
+    justify-content: center;
+    margin:100px auto;
+    width: 200px;
+    height: 100px;
+}
+.txtInd1 {
+    
+}
+.txtInd2 {
+    margin-top: 10px;
+}
+.btnGerar {
+    margin-top: 10px;
+}
+
+/* Tabelona  */
+.areaTabela {
+    width: 100%;
+}
+#tabelona {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+#tabelona th {
+  background-color: #04AA6D;
+  color: white;
+}
+#tabelona td {
+  background-color: #CFCFCF;
+}
+
+
+
