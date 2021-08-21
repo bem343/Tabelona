@@ -39,6 +39,11 @@ $(function(){
         }
         if (!par1 | !par2){ alert("Você colocou um número impar de alelos!"); return; }
 
+        //Coloca os genótipos nos H
+        $('#hind1').html(ind1);
+        $('#hind2').html(ind2);
+        $('.caixaInfo').show();
+
         //=============================================================================================
         //Cria os dois Arrays
         //Indivíduo 1
@@ -122,7 +127,8 @@ $(function(){
                                 gametasInd1[cont+qtVezes] += aPossiveisInd1.substr(i+1, 1);
                             }
                             if (qtVezes > 1){cont++;} else {cont+=2;}
-                        }        
+                        }
+                        if (qtVezes > 1 && qtVezes < posGametasInd1/2){cont+=qtVezes;}
                     }
                     cont = 0;
                     i++;
@@ -168,7 +174,8 @@ $(function(){
                                 gametasInd2[cont+qtVezes] += aPossiveisInd2.substr(i+1, 1);
                             }
                             if (qtVezes > 1){cont++;} else {cont+=2;}
-                        }        
+                        }
+                        if (qtVezes > 1 && qtVezes < posGametasInd2/2){cont+=qtVezes;}
                     }
                     cont = 0;
                     i++;
@@ -231,7 +238,8 @@ $(function(){
         //Monta a tabela ===============================================================================
         //Primeira linha (Individuo 1)
         let conteudo = "";
-        conteudo += "<table id='tabelona'><tr><th>/</th>";
+        cont = 1;
+        conteudo += "<table id='tabelona'><tr><th>G2|G1</th>";
         for (let i = 0; i < gametasInd1.length; i++)
         {
                 conteudo += "<th>" + gametasInd1[i] + "</th>";
@@ -244,13 +252,15 @@ $(function(){
 
                 //Monta os genótipos
                 for(let p = 0; p < gametasInd1.length; p++){
-                        conteudo += "<td>" + genotipos[i][p] + "</td>";
+                        conteudo += "<td id='gen" + cont + "'>" + genotipos[i][p] + "</td>";
+                        cont++;
                 }            
 
                 conteudo += "</tr>";
         }
         conteudo += "</table>";
         $("#areaTabela").html(conteudo);
+        //$("#gen7").css('background-color', 'white');
 
     });
 

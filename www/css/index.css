@@ -1,8 +1,11 @@
 @font-face{
-    font-family: 'Tw Cen MT';
-    src: url('../assets/fonts/TCCB____.ttf');
+    font-family: "Font";
+    src: local('../assets/fonts/tw.TTF'),
+    url('../assets/fonts/tw.TTF') format('truetype');
+    font-weigth: normal;
+    font-style: normal;
 }
-* { font-family: Tw Cen MT, sans-serif; font-style: normal; font-size: 20px; }
+* { font-family: "Font" !important; font-size: 20px; }
 body { 
     margin: 0px;
     padding: 0px; 
@@ -20,6 +23,7 @@ th, tr, td { border: 1px solid white; height: 30px; }
 
 /* CaixaDados */
 .abraca {
+    margin-top: 80px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -27,12 +31,9 @@ th, tr, td { border: 1px solid white; height: 30px; }
 .caixaDados {
     display: inline-grid;
     justify-content: center;
-    margin:100px auto;
+    margin: auto;
     width: 200px;
-    height: 100px;
-}
-.txtInd1 {
-    
+    height: 150px;
 }
 .txtInd2 {
     margin-top: 10px;
@@ -41,6 +42,25 @@ th, tr, td { border: 1px solid white; height: 30px; }
     margin-top: 10px;
 }
 
+/* areaInfo */
+.areaInfo {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+.caixaInfo {
+    display: none;
+    width: 200px;
+    margin: auto;
+    border:  1px solid white;
+}
+#hind1 {
+    color: white;
+}
+#hind2 {
+    color: white;
+}
 /* Tabelona  */
 .areaTabela {
     width: 100%;
